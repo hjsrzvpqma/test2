@@ -223,6 +223,7 @@ function create_config( )
     "invite",
     "all",
     "leave_ban",
+    "plugins",
     "block_user",
 	"supergroup",
 	"whitelist",
