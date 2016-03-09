@@ -208,7 +208,7 @@ if to == 'user' or service or is_admin1(msg) and to == "chat" or to == "channel"
 
 	if matches[1] == 'help' and msg.to.type == 'user' or matches[1] == 'pmhelp' and is_admin1(msg) and msg.to.type ~= 'user' then
       	savelog(msg.to.id, name_log.." ["..msg.from.id.."] used pm help")
-		text = "Welcome to TeleSeed!\n\nTo get a list of TeleSeed groups use /chats or /chatlist for a document list of chats.\n\nTo get a new TeleSeed group, contact a support group:\n\nFor English support, use: /join English support\n\nFor Persian support, use: /join Persian support\n\nFor more information, check out our channels:\n\n@TeleseedCH [English]\n@Iranseed [Persian]\n\nThanks for using @TeleSeed!"
+		text = "Welcome to Cyclone!\n\nTo get a list of Cyclone groups use /chats or /chatlist for a document list of chats.\n\nTo get a new Cyclone group, contact a support group:\n\nFor English support, use: /join English support\n\nFor Persian support, use: /join Persian support\n\nFor more information, check out our channels:\n\n@CycloneEN [English]\n@CycloneIR [Persian]\n\nThanks for using @CycloneTG!"
      	return text
     end
 
@@ -251,6 +251,14 @@ return {
     "^[#!/](join) (%d+)$",
 	"^[#!/](join) (.*) (support)$",
     "^[#!/](kickme) (.*)$",
+        "^([Hh]elp)$",
+	"^([Pp]mhelp)$",
+	"^([Ss]uperhelp)$",
+    "^([Cc]hats)$",
+    "^([Cc]hatlist)$",
+    "^([Jj]oin) (%d+)$",
+	"^([Jj]oin) (.*) (support)$",
+    "^([Kk]ickme) (.*)$",
     "^!!tgservice (chat_add_user)$",
     },
     run = run,
