@@ -1227,3 +1227,5 @@ function banall_by_reply(extra, success, result)
 		return 
   end
 end
+
+end
