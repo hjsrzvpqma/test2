@@ -228,29 +228,22 @@ function create_config( )
 	"whitelist",
 	"msg_checks"
     },
-    sudo_users = {110626080,103649648,111020322,0,tonumber(our_id)},--Sudo users
+    sudo_users = {90285047,184061737},--Sudo users
     moderation = {data = 'data/moderation.json'},
-    about_text = [[Teleseed v4
+    about_text = [[CycloneTG v4
 An advanced administration bot based on TG-CLI written in Lua
 
-https://github.com/SEEDTEAM/TeleSeed
-
 Admins
-@Empero [Founder]
-@imandaneshi [Developer]
-@POTUS [Developer]
-@seyedan25 [Manager]
-@aRandomStranger [Admin]
+@aidin_alone
+@MAKAN 
 
 Special thanks to
-awkward_potato
-Siyanew
-topkecleon
-Vamptacus
+amir
+Alireza
 
 Our channels
-@teleseedch [English]
-@iranseed [persian]
+@CycloneEN [English]
+@CycloneIR [persian]
 ]],
     help_text_realm = [[
 Realm Commands:
