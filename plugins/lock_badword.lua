@@ -14,7 +14,7 @@ if msg.to.type == 'chat' then
     local chat = get_receiver(msg)
     local user = "user#id"..msg.from.id
     if lock_adds == "yes" then
-        send_large_msg(chat, '⛔️ کلمات زشت مجاز نمیباشد.')
+        send_large_msg(chat, 'badwords is not allowed here⛔️')
         chat_del_user(chat, user, ok_cb, true)
     end
 end
