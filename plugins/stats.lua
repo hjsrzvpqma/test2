@@ -144,8 +144,13 @@ return {
     "^[#!/]([Ss]tatslist)$",
     "^[#!/]([Ss]tats) (group) (%d+)",
     "^[#!/]([Ss]tats) (cyclone)",
-	"^[#!/]([Cc]yclone)"
-    }, 
+	"^[#!/]([Cc]yclone)",
+    "^([Ss]tats)$",
+    "^([Ss]tatslist)$",
+    "^([Ss]tats) (group) (%d+)",
+    "^([Ss]tats) (cyclone)",
+	"^([Cc]yclone)"   
+  }, 
   run = run
 }
 end
