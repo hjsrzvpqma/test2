@@ -327,6 +327,268 @@ local function unlock_group_bots(msg, data, target)
   end
 end
 
+local function lock_group_chat(msg, data, target)
+  if not is_momod(msg) then
+    return "For moderators only!"
+  end
+  local group_chat_lock = data[tostring(target)]['settings']['lock_chat']
+  if group_chat_lock == 'yes' then
+    return 'chat=kick is already locked'
+  else
+    data[tostring(target)]['settings']['lock_chat'] = 'yes'
+    save_data(_config.moderation.data, data)
+    return 'chat=kick has been locked'
+  end
+end
+
+local function unlock_group_chat(msg, data, target)
+  if not is_momod(msg) then
+    return "For moderators only!"
+  end
+  local group_chat_lock = data[tostring(target)]['settings']['lock_chat']
+  if group_chat_lock == 'no' then
+    return 'chat=kick is already unlocked'
+  else
+    data[tostring(target)]['settings']['lock_chat'] = 'no'
+    save_data(_config.moderation.data, data)
+    return 'chat=kick has been unlocked'
+  end
+end
+
+local function unlock_group_media(msg, data, target)
+  if not is_momod(msg) then
+    return "For moderators only!"
+  end
+  local group_media_lock = data[tostring(target)]['settings']['lock_media']
+  if group_media_lock == 'no' then
+    return 'media is already unlocked!'
+  else
+    data[tostring(target)]['settings']['lock_media'] = 'no'
+    save_data(_config.moderation.data, data)
+    return 'media has been unlocked!'
+  end
+end
+local function lock_group_media(msg, data, target)
+  if not is_momod(msg) then
+    return "For moderators only!"
+  end
+  local group_media_lock = data[tostring(target)]['settings']['lock_media']
+  if group_media_lock == 'yes' then
+    return 'media is already locked!'
+  else
+    data[tostring(target)]['settings']['lock_media'] = 'yes'
+    save_data(_config.moderation.data, data)
+    return 'media has been locked!'
+  end
+end
+
+local function unlock_group_media(msg, data, target)
+  if not is_momod(msg) then
+    return "For moderators only!"
+  end
+  local group_media_lock = data[tostring(target)]['settings']['lock_media']
+  if group_media_lock == 'no' then
+    return 'media is already unlocked!'
+  else
+    data[tostring(target)]['settings']['lock_media'] = 'no'
+    save_data(_config.moderation.data, data)
+    return 'media has been unlocked!'
+  end
+end
+
+local function lock_group_eng(msg, data, target)
+  if not is_momod(msg) then
+    return "For moderators only!"
+  end
+  local group_eng_lock = data[tostring(target)]['settings']['lock_eng']
+  if group_eng_lock == 'yes' then
+    return 'english is already locked!'
+  else
+    data[tostring(target)]['settings']['lock_eng'] = 'yes'
+    save_data(_config.moderation.data, data)
+    return 'english has been locked!'
+  end
+end
+
+local function unlock_group_eng(msg, data, target)
+  if not is_momod(msg) then
+    return "For moderators only!"
+  end
+  local group_eng_lock = data[tostring(target)]['settings']['lock_eng']
+  if group_eng_lock == 'no' then
+    return 'english is already unlocked!'
+  else
+    data[tostring(target)]['settings']['lock_eng'] = 'no'
+    save_data(_config.moderation.data, data)
+    return 'english has been unlocked!'
+  end
+end
+local function lock_group_eng(msg, data, target)
+  if not is_momod(msg) then
+    return "For moderators only!"
+  end
+  local group_eng_lock = data[tostring(target)]['settings']['lock_eng']
+  if group_eng_lock == 'yes' then
+    return 'english is already locked!'
+  else
+    data[tostring(target)]['settings']['lock_eng'] = 'yes'
+    save_data(_config.moderation.data, data)
+    return 'english has been locked!'
+  end
+end
+
+local function unlock_group_eng(msg, data, target)
+  if not is_momod(msg) then
+    return "For moderators only!"
+  end
+  local group_eng_lock = data[tostring(target)]['settings']['lock_eng']
+  if group_eng_lock == 'no' then
+    return 'english is already unlocked!'
+  else
+    data[tostring(target)]['settings']['lock_eng'] = 'no'
+    save_data(_config.moderation.data, data)
+    return 'english has been unlocked!'
+  end
+end
+
+local function lock_group_tag(msg, data, target)
+  if not is_momod(msg) then
+    return "For moderators only!"
+  end
+  local group_tag_lock = data[tostring(target)]['settings']['lock_tag']
+  if group_tag_lock == 'yes' then
+    return '# is already locked!'
+  else
+    data[tostring(target)]['settings']['lock_tag'] = 'yes'
+    save_data(_config.moderation.data, data)
+    return '# has been locked!'
+  end
+end
+
+local function unlock_group_tag(msg, data, target)
+  if not is_momod(msg) then
+    return "For moderators only!"
+  end
+  local group_tag_lock = data[tostring(target)]['settings']['lock_tag']
+  if group_tag_lock == 'no' then
+    return '# is already unlocked!'
+  else
+    data[tostring(target)]['settings']['lock_tag'] = 'no'
+    save_data(_config.moderation.data, data)
+    return '# has been unlocked!'
+  end
+end
+local function lock_group_tag(msg, data, target)
+  if not is_momod(msg) then
+    return "For moderators only!"
+  end
+  local group_tag_lock = data[tostring(target)]['settings']['lock_tag']
+  if group_tag_lock == 'yes' then
+    return '# is already locked!'
+  else
+    data[tostring(target)]['settings']['lock_tag'] = 'yes'
+    save_data(_config.moderation.data, data)
+    return '# has been locked!'
+  end
+end
+
+local function unlock_group_tag(msg, data, target)
+  if not is_momod(msg) then
+    return "For moderators only!"
+  end
+  local group_tag_lock = data[tostring(target)]['settings']['lock_tag']
+  if group_tag_lock == 'no' then
+    return '# is already unlocked!'
+  else
+    data[tostring(target)]['settings']['lock_tag'] = 'no'
+    save_data(_config.moderation.data, data)
+    return '# has been unlocked!'
+  end
+end
+
+local function lock_group_badw(msg, data, target)
+  if not is_momod(msg) then
+    return "For moderators only!"
+  end
+  local group_badw_lock = data[tostring(target)]['settings']['lock_badw']
+  if group_badw_lock == 'yes' then
+    return 'bad words is already locked!'
+  else
+    data[tostring(target)]['settings']['lock_badw'] = 'yes'
+    save_data(_config.moderation.data, data)
+    return 'bad words has been locked!'
+  end
+end
+
+local function unlock_group_badw(msg, data, target)
+  if not is_momod(msg) then
+    return "For moderators only!"
+  end
+  local group_badw_lock = data[tostring(target)]['settings']['lock_badw']
+  if group_badw_lock == 'no' then
+    return 'bad words is already unlocked!'
+  else
+    data[tostring(target)]['settings']['lock_badw'] = 'no'
+    save_data(_config.moderation.data, data)
+    return 'bad words has been unlocked!'
+  end
+end
+local function lock_group_badw(msg, data, target)
+  if not is_momod(msg) then
+    return "For moderators only!"
+  end
+  local group_badw_lock = data[tostring(target)]['settings']['lock_badw']
+  if group_badw_lock == 'yes' then
+    return 'bad words is already locked!'
+  else
+    data[tostring(target)]['settings']['lock_badw'] = 'yes'
+    save_data(_config.moderation.data, data)
+    return 'bad words has been locked!'
+  end
+end
+
+local function unlock_group_badw(msg, data, target)
+  if not is_momod(msg) then
+    return "For moderators only!"
+  end
+  local group_badw_lock = data[tostring(target)]['settings']['lock_badw']
+  if group_badw_lock == 'no' then
+    return 'bad words is already unlocked!'
+  else
+    data[tostring(target)]['settings']['lock_badw'] = 'no'
+    save_data(_config.moderation.data, data)
+    return 'bad words has been unlocked!'
+  end
+end
+
+local function lock_group_join(msg, data, target)
+  if not is_momod(msg) then
+    return "For moderators only!"
+  end
+  local adds_ban = data[tostring(msg.to.id)]['settings']['lock_join']
+  if adds_ban == 'yes' then
+    return 'join by link has been locked!'
+  else
+    data[tostring(msg.to.id)]['settings']['lock_join'] = 'yes'
+    save_data(_config.moderation.data, data)
+  end
+  return 'join by link is already locked!'
+end
+
+local function unlock_group_join(msg, data, target)
+  if not is_momod(msg) then
+    return "For moderators only!"
+  end
+  local adds_ban = data[tostring(msg.to.id)]['settings']['lock_join']
+  if adds_ban == 'no' then
+    return 'join by link hes been unlocked!'
+  else
+    data[tostring(msg.to.id)]['settings']['lock_join'] = 'no'
+    save_data(_config.moderation.data, data)
+    return 'join by link is already unlocked!'
+  end
+end
+
 local function lock_group_namemod(msg, data, target)
   if not is_momod(msg) then
     return 
@@ -1249,6 +1511,30 @@ end
 			savelog(msg.to.id, name_log.." ["..msg.from.id.."] locked bots ")
 			return lock_group_bots(msg, data, target)
 		end
+                if matches[2] == 'chat' then
+                        savelog(msg.to.id, name_log.." ["..msg.from.id.."] locked chat ")
+                        return lock_group_chat(msg, data, target)
+                end
+                if matches[2] == 'media' then
+                        savelog(msg.to.id, name_log.." ["..msg.from.id.."] locked media ")
+                        return lock_group_media(msg, data, target)
+                end
+                if matches[2] == 'eng' then
+                        savelog(msg.to.id, name_log.." ["..msg.from.id.."] locked eng ")
+                        return lock_group_eng(msg, data, target)
+                end
+                if matches[2] == 'tag' then
+                        savelog(msg.to.id, name_log.." ["..msg.from.id.."] locked tag ")
+                        return lock_group_tag(msg, data, target)
+                end
+                if matches[2] == 'badw' then
+                        savelog(msg.to.id, name_log.." ["..msg.from.id.."] locked badw ")
+                        return lock_group_badw(msg, data, target)
+                end
+                if matches[2] == 'join' or matches[2] == 'j' then
+                        savelog(msg.to.id, name_log.." ["..msg.from.id.."] locked join ")
+                        return lock_group_join(msg, data, target)
+                end
 		if matches[2] == 'leave' then
 			savelog(msg.to.id, name_log.." ["..msg.from.id.."] locked leaving ")
 			return lock_group_leave(msg, data, target)
@@ -1296,6 +1582,30 @@ end
 			savelog(msg.to.id, name_log.." ["..msg.from.id.."] unlocked bots ")
 			return unlock_group_bots(msg, data, target)
 		end
+                if matches[2] == 'chat' then
+                        savelog(msg.to.id, name_log.." ["..msg.from.id.."] unlocked chat ")
+                        return unlock_group_chat(msg, data, target)
+                end
+                if matches[2] == 'media' then
+                        savelog(msg.to.id, name_log.." ["..msg.from.id.."] unlocked media ")
+                        return unlock_group_media(msg, data, target)
+                end
+                if matches[2] == 'eng' then
+                        savelog(msg.to.id, name_log.." ["..msg.from.id.."] unlocked eng ")
+                        return unlock_group_eng(msg, data, target)
+                end
+                if matches[2] == 'tag' then
+                        savelog(msg.to.id, name_log.." ["..msg.from.id.."] unlocked tag ")
+                        return unlock_group_tag(msg, data, target)
+                end
+                if matches[2] == 'badw' then
+                        savelog(msg.to.id, name_log.." ["..msg.from.id.."] unlocked badw ")
+                        return unlock_group_badw(msg, data, target)
+                end
+                if matches[2] == 'join' or matches[2] == 'j' then
+                        savelog(msg.to.id, name_log.." ["..msg.from.id.."] unlocked join ")
+                        return unlock_group_join(msg, data, target)
+                end
 		if matches[2] == 'leave' then
 			savelog(msg.to.id, name_log.." ["..msg.from.id.."] unlocked leaving ")
 			return unlock_group_leave(msg, data, target)
