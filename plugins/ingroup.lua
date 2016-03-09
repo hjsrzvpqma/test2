@@ -204,6 +204,30 @@ function show_group_settingsmod(msg, target)
     if data[tostring(target)]['settings']['leave_ban'] then
     	leave_ban = data[tostring(target)]['settings']['leave_ban']
    	end
+    local lock_chat = "no"
+    if data[tostring(msg.to.id)]['settings']['lock_chat'] then
+        lock_chat = data[tostring(msg.to.id)]['settings']['lock_chat']
+        end
+local lock_media = "no"
+    if data[tostring(msg.to.id)]['settings']['lock_media'] then
+        lock_media = data[tostring(msg.to.id)]['settings']['lock_media']
+        end
+  local lock_join= "no"
+    if data[tostring(msg.to.id)]['settings']['lock_join'] then
+        lock_join = data[tostring(msg.to.id)]['settings']['lock_join']
+        end
+          local lock_eng = "no"
+    if data[tostring(msg.to.id)]['settings']['lock_eng'] then
+        lock_eng = data[tostring(msg.to.id)]['settings']['lock_eng']
+        end
+          local lock_badw = "no"
+    if data[tostring(msg.to.id)]['settings']['lock_badw'] then
+        lock_badw = data[tostring(msg.to.id)]['settings']['lock_badw']
+        end
+        local lock_tag = "no"
+    if data[tostring(msg.to.id)]['settings']['lock_tag'] then
+        lock_tag = data[tostring(msg.to.id)]['settings']['lock_tag']
+        end
 	if data[tostring(target)]['settings'] then
 		if not data[tostring(target)]['settings']['lock_link'] then
 			data[tostring(target)]['settings']['lock_link'] = 'no'
@@ -225,7 +249,7 @@ function show_group_settingsmod(msg, target)
 		end
 	end
   local settings = data[tostring(target)]['settings']
-  local text = "Group settings:\nLock group english : "..lock_eng.."\nLock group tag : "..lock_tag.."\nLock group media : "..lock_media.."\nLock group join : "..lock_join.."\nLock group badwords : "..lock_badw.."\nLock group chat : "..lock_chat.."\nLock group name : "..settings.lock_name.."\nLock group photo : "..settings.lock_photo.."\nLock group member : "..settings.lock_member.."\nLock group leave : "..leave_ban.."\nflood sensitivity : "..NUM_MSG_MAX.."\nBot protection : "..bots_protection.."\nLock group links : "..settings.lock_link.."\nLock group RTL: "..settings.lock_rtl.."\nLock group sticker: "..settings.lock_sticker.."\nPublic: "..settings.public
+  local text = "⚙ Group settings:\n› Lock group english : "..lock_eng.."\n› Lock group tag : "..lock_tag.."\n› Lock group media : "..lock_media.."\n› Lock group join : "..lock_join.."\n› Lock group badwords : "..lock_badw.."\n› Lock group chat : "..lock_chat.."\n› Lock group name : "..settings.lock_name.."\n› Lock group photo : "..settings.lock_photo.."\n› Lock group member : "..settings.lock_member.."\n› Lock group leave : "..leave_ban.."\n› flood sensitivity : "..NUM_MSG_MAX.."\n› Bot protection : "..bots_protection.."\n› Lock group links : "..settings.lock_link.."\n› Lock group RTL: "..settings.lock_rtl.."\n› Lock group sticker: "..settings.lock_sticker.."\n› Public: "..settings.public
   return text
 end
 
