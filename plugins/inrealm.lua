@@ -438,7 +438,7 @@ local function show_super_group_settings(msg, data, target)
 		end
 	end
     local settings = data[tostring(target)]['settings']
-    local text = "SuperGroup settings for "..target..":\nLock links : "..settings.lock_link.."\nLock flood: "..settings.flood.."\nLock spam: "..settings.lock_spam.."\nLock Arabic: "..settings.lock_arabic.."\nLock Member: "..settings.lock_member.."\nLock RTL: "..settings.lock_rtl.."\nLock sticker: "..settings.lock_sticker.."\nPublic: "..settings.public.."\nStrict settings: "..settings.strict
+    local text = "⚙ SuperGroup settings for "..target..":\n› Lock Sgroup links : "..settings.lock_link.."\n› Lock Sgroup flood: "..settings.flood.."\n› Lock Sgroup spam: "..settings.lock_spam.."\n› Lock Sgroup Arabic: "..settings.lock_arabic.."\n› Lock Sgroup Member: "..settings.lock_member.."\n› Lock Sgroup RTL: "..settings.lock_rtl.."\n› Lock Sgroup sticker: "..settings.lock_sticker.."\n› Public: "..settings.public.."\n› Strict settings: "..settings.strict
     return text
 end
 
@@ -1069,6 +1069,34 @@ return {
     "^[#!/](list) (.*)$",
     "^[#!/](log)$",
     "^[#!/](help)$",
+    "^([Cc]reategroup) (.*)$",
+	"^([Cc]reatesuper) (.*)$",
+    "^([Cc]reaterealm) (.*)$",
+    "^([Ss]etabout) (%d+) (.*)$",
+    "^([Ss]etrules) (%d+) (.*)$",
+    "^([Ss]etname) (.*)$",
+    "^([Ss]etgpname) (%d+) (.*)$",
+    "^([Ss]etname) (%d+) (.*)$",
+    "^([Ll]ock) (%d+) (.*)$",
+    "^([Uu]nlock) (%d+) (.*)$",
+	"^([Mm]ute) (%d+)$",
+	"^([Uu]nmute) (%d+)$",
+    "^([Ss]ettings) (.*) (%d+)$",
+    "^([Ww]holist)$",
+    "^([Ww]ho)$",
+	"^([Ww]hois) (.*)",
+    "^([Tt]ype)$",
+    "^([Kk]ill) (chat) (%d+)$",
+    "^([Kk]ill) (realm) (%d+)$",
+	"^([Rr]em) (%d+)$",
+    "^([Aa]ddadmin) (.*)$", -- sudoers only
+    "^([Rr]emoveadmin) (.*)$", -- sudoers only
+	"^([Ss]upport)$",
+	"^([Ss]upport) (.*)$",
+    "^(-[Ss]upport) (.*)$",
+    "^([Ll]ist) (.*)$",
+    "^([Ll]og)$",
+    "^([Hh]elp)$",
     "^!!tgservice (.+)$",
   },
   run = run
