@@ -225,7 +225,7 @@ function show_group_settingsmod(msg, target)
 		end
 	end
   local settings = data[tostring(target)]['settings']
-  local text = "Group settings:\nLock group name : "..settings.lock_name.."\nLock group photo : "..settings.lock_photo.."\nLock group member : "..settings.lock_member.."\nLock group leave : "..leave_ban.."\nflood sensitivity : "..NUM_MSG_MAX.."\nBot protection : "..bots_protection.."\nLock links : "..settings.lock_link.."\nLock RTL: "..settings.lock_rtl.."\nLock sticker: "..settings.lock_sticker.."\nPublic: "..settings.public
+  local text = "Group settings:\nLock group english : "..lock_eng.."\nLock group tag : "..lock_tag.."\nLock group media : "..lock_media.."\nLock group join : "..lock_join.."\nLock group badwords : "..lock_badw.."\nLock group chat : "..lock_chat.."\nLock group name : "..settings.lock_name.."\nLock group photo : "..settings.lock_photo.."\nLock group member : "..settings.lock_member.."\nLock group leave : "..leave_ban.."\nflood sensitivity : "..NUM_MSG_MAX.."\nBot protection : "..bots_protection.."\nLock group links : "..settings.lock_link.."\nLock group RTL: "..settings.lock_rtl.."\nLock group sticker: "..settings.lock_sticker.."\nPublic: "..settings.public
   return text
 end
 
